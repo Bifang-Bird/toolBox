@@ -40,8 +40,11 @@ class RedisCluster(object):  # 连接redis集群
             if dic[i].get('cluster_state'):  # 获取状态
                 print("节点状态, ip: ", ip, "value: ", dic[i].get('cluster_state'))
 
-# redis_basis_conn = [{'host': '10.2.8.5', 'port': 7001}, {'host': '10.2.8.6', 'port': 7001}, {'host': '10.2.8.7', 'port': 7001}, {'host': '10.2.8.8', 'port': 7001}, {'host': '10.2.8.9', 'port': 7001},{'host': '10.2.8.5', 'port': 7002}, {'host': '10.2.8.6', 'port': 7002}, {'host': '10.2.8.7', 'port': 7002}, {'host': '10.2.8.8', 'port': 7002}, {'host': '10.2.8.9', 'port': 7002}]
 
-redis_basis_conn = [{'host': '39.100.38.255', 'port': 7001}, {'host': '39.100.38.255', 'port': 7002}, {'host': '39.100.38.255', 'port': 7003}, {'host': '39.100.38.255', 'port': 7004}, {'host': '39.100.38.255', 'port': 7005},{'host': '39.100.38.255', 'port': 7006}, {'host': '39.100.38.255', 'port': 7007}, {'host': '39.100.38.255', 'port': 7008}]
+if __name__ == '__main__':
 
-RedisCluster(redis_basis_conn).get_state()
+    # redis_basis_conn = [{'host': '10.2.8.5', 'port': 7001}, {'host': '10.2.8.6', 'port': 7001}, {'host': '10.2.8.7', 'port': 7001}, {'host': '10.2.8.8', 'port': 7001}, {'host': '10.2.8.9', 'port': 7001},{'host': '10.2.8.5', 'port': 7002}, {'host': '10.2.8.6', 'port': 7002}, {'host': '10.2.8.7', 'port': 7002}, {'host': '10.2.8.8', 'port': 7002}, {'host': '10.2.8.9', 'port': 7002}]
+
+    redis_basis_conn = [{'host': '39.100.38.255', 'port': 7001}, {'host': '39.100.38.255', 'port': 7002}, {'host': '39.100.38.255', 'port': 7003}, {'host': '39.100.38.255', 'port': 7004}, {'host': '39.100.38.255', 'port': 7005},{'host': '39.100.38.255', 'port': 7006}, {'host': '39.100.38.255', 'port': 7007}, {'host': '39.100.38.255', 'port': 7008}]
+
+    RedisCluster(redis_basis_conn).get_state()
