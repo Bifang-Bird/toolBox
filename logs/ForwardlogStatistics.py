@@ -31,5 +31,5 @@ if __name__ == '__main__':
     files = comUtils.walkFile()
     for file in files:
         speechncp(file)
-    fail= len(data) / x
-    print ('已发送未反馈报文数：%d' %(len(data)),'已反馈未匹配到发送报文数：%d' %(len(rdata)),'发送失败率：%f' %(fail))
+    fail = len(data) / x
+    print('已发送未反馈报文数：%d' %(len(data)),'已反馈未匹配到发送报文数：%d' %(len(rdata)),'发送失败率：%f' %(fail))
